@@ -9,7 +9,7 @@ We are constantly updating repository with the updates of `create-react-app`, so
 
 ## Converted to custom setup
 
-Moved all dependencies to dev dependencies because we don't need extra dependencies for our library after build, but we want all this features while developing: 
+Moved all dependencies to dev dependencies because we don't need extra dependencies for our library after build, but we want all this features while developing:
 
 * React, JSX, ES6, and Flow syntax support.
 * Language extras beyond ES6 like the object spread operator.
@@ -39,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Library files
 
-All library files are located inside `src/lib`  
+All library files are located inside `src`  
 
 ## Demo app
 

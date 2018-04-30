@@ -31,7 +31,8 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 }
 
 // Note: defined here because it will be used more than once.
-const cssFilename = 'css/index.css';
+// const cssFilename = 'css/index.css';
+const cssFilename = '[name].[contenthash:8].css';
 
 // ExtractTextPlugin expects the build output to be flat.
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
@@ -169,6 +170,7 @@ module.exports = {
                       loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
+                        modules: true,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                       },
@@ -212,7 +214,8 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.js$/, /\.html$/, /\.json$/],
             options: {
-              name: '[hash].[ext]',
+              // name: '[hash].[ext]',
+              name: 'static/media/[name].[hash:8].[ext]',
               outputPath: 'media/',
               publicPath: '../'
             },
